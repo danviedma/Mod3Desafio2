@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style3.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <h1>Ingresa el password</h1>
+      <section class="select-container">
+        <select name="number" id="selectUno">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <select name="number" id="selectDos">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <select name="" id="selectTres">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </section>
+      <section class="verificar">
+        <button
+          onclick="
+            valor1 = document.querySelector('#selectUno').value
+            valor2 = document.querySelector('#selectDos').value
+            valor3 = document.querySelector('#selectTres').value
+            if(valor1 == 9 && valor2 == 1 && valor3 == 1){
+                document.querySelector('#respuesta').innerHTML = 'Password 1 correcto'
+            } else if(valor1 == 7 && valor2 == 1 && valor3 == 4){ 
+                document.querySelector('#respuesta').innerHTML = 'Password 2 correcto'
+            }else{
+                document.querySelector('#respuesta').innerHTML = 'Password incorrecto'
+            }"
+        >
+          Ingresar
+        </button>
+        <p id="respuesta"></p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <article class="sticker">
+                <img src="./assets/img/javascript.png" alt="">
+                <input type="text" id="inputUno">
+            </article>
+            <article class="sticker">
+                <img src="./assets/img/html5.png" alt="">
+                <input type="text" id="inputDos">
+            </article>
+            <article class="sticker">
+                <img src="./assets/img/cssimg.png" alt="">
+                <input type="text" id="inputTres">
+            </article>
+        </div>
+        <div class="resultado">
+            <p id="respuesta">Llevas <span id="cantidad">0</span> stickers</p>
+            <p id="respuesta2"></p>
+            <button onclick="
+                const valor1 = Number(document.querySelector('#inputUno').value);
+                const valor2 = Number(document.querySelector('#inputDos').value);
+                const valor3 = Number(document.querySelector('#inputTres').value);
+                const total = valor1 + valor2 + valor3;
+                if(total <= 10){
+                    document.querySelector('#respuesta').style.display = 'block'
+                    document.querySelector('#cantidad').innerHTML = total;
+                    document.querySelector('#respuesta2').style.display = 'none';
+                } else {
+                    document.querySelector('#respuesta').style.display = 'none'
+                    document.querySelector('#respuesta2').style.display = 'block';
+                    document.querySelector('#respuesta2').innerHTML = 'Llevas demasiados stickers!!';
+                }
+            ">Verificar</button>
+        </div>
+     </section>
+</body>
+</html>
